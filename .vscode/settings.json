@@ -1,0 +1,6 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#344074", // 红色 = 生产环境项目
+    "statusBar.background": "#344074"
+  }
+}
