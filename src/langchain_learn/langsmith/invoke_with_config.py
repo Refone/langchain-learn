@@ -29,6 +29,7 @@ config = {
         "user_id": "shkstart",     # 记录用户ID
         "session_id": "sess_123"   # 记录会话ID
     },
+    # 相比于 init_chat_model, 优先级更高
     "configurable": {
         "model": "deepseek-v4-pro",  # 配置模型参数
         "model_provider": "openai",  # 配置模型提供商参数

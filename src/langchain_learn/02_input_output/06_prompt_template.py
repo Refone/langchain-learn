@@ -9,8 +9,11 @@ from langchain_openai import ChatOpenAI
 
 load_dotenv()
 
+# 1. 模板构建方法:
 # Method 1.
-prompt_template = ChatPromptTemplate.from_template("请评价{product}的优缺点, 包括{aspect1}和{aspect2}.")
+prompt_template = ChatPromptTemplate.from_template(
+    "请评价{product}的优缺点, 包括{aspect1}和{aspect2}."
+    )
 
 # Method 2.
 prompt_template = ChatPromptTemplate.from_messages(
@@ -28,7 +31,16 @@ prompt_template = ChatPromptTemplate.from_messages(
     ]
 )
 
-# 对提示词占位符进行赋值
+# 2. 模板调用方法
+# Method 1. format_messages()
+prompt = prompt_template.format_messages(
+    product='Macbook Pro M1 2021',
+    aspect1="性能",
+    aspect2="性价比"
+    )
+# print(prompt)
+
+# Method 2. invoke
 prompt = prompt_template.invoke(
     {
         "product" : "Macbook Pro M1 2021",
