@@ -30,3 +30,4 @@ result = chain.invoke(
 )
 
 print(result)
+# {'en': "So that's how it is.", 'jp': 'なるほど'}
